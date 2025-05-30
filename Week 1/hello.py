@@ -5,6 +5,8 @@
 print("Hello World")
 
 
-test <- "Hello World"
+test = "Hello World"
 print(test)
 
+print (1/3)
+print(6//5)
