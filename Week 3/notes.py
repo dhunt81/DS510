@@ -53,7 +53,7 @@ while noEnd:
 ### defining functions
 
 def addOne (x):
-    return x+1
+    return (x+1)
 
 def main():
     a = 5
