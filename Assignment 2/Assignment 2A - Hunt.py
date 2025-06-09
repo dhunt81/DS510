@@ -8,6 +8,7 @@
 ###         T = time in years
 ###         N = number of periods per year (1, 4, or 12)
 ### Output: Interest table displaying the final total investment amount on a single deposit
+### References: Sample Code from Dr. Loren Rhodes for right alignment of text
 ##################################
 
 ### Ask user for inputs as noted above
