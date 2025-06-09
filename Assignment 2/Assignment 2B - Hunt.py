@@ -11,6 +11,7 @@
 
 ### Ask user for inputs as noted above
 
+# create function that takes in an int between 1 and 12 and outputs the month in text
 def MonthName(mon):
     if mon == 1:
         month = "January"
@@ -39,22 +40,35 @@ def MonthName(mon):
     
     return(month)
 
+# main function
 def main():
+    # initialize variable to continue while loop
     noEnd = True
+
+    #while loop so long as noEnd is True
     while noEnd:
+        #prompt user for inputs
         mon = int(input("Enter a Month, numeric, 1-12: "))
         day = int(input("Enter a Day, numeric, 1-31: "))
         year = int(input("Enter a year, numeric, 1583 or after: "))
-        month = MonthName(mon)
 
+        # call function and store output 
+        month = MonthName(mon)
+        
+        # create formatted date 
         dateFmt = "{0} {1}, {2}".format(month, day, year)
 
+        # output date entered and formatted date
         print("You entered: {0}/{1}/{2}".format(mon, day, year))
         print("Which is: {0}".format(dateFmt))
 
+        # ask user if they want to continue
         cont = input("Would you like to enter another date? (y/N): ")
+
+        # check is lowercase y is entered. if so continue, if anything else then stop
         noEnd = cont.lower() == "y"
 
+#run main function
 main()  
 
 """ Test runs
