@@ -1,4 +1,6 @@
+##################################
 ### Created: June 22, 2025
+### Author: Devin Hunt
 ### DS510 Assignment 4 Part A
 ### Description: Asks user for size of random list, calculates mean, and displays numbers above that mean
 ### Inputs: n = size of the list
