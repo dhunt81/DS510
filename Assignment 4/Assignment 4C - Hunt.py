@@ -18,12 +18,15 @@ def checkSum(ccnum):
         payload.append(int(ccnum[i])) 
     print("Payload (CC without last number) is:", payload)
 
-
+    #count backwards and double every second number
     for k in range(len(payload)-1,-1,-2):
         payload[k] = payload[k]*2 - 9*((payload[k]*2)>9)
     print("Sum digits ", payload)  
+    
+    # take sum of the list
     payloadSum = sum(payload)
 
+    #calculate check sum 
     checkSum = (10 - (payloadSum % 10)) % 10
 
     return checkSum
