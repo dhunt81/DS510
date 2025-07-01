@@ -1,0 +1,5 @@
+Hi There,
+This is a sample file, and isn't it nice?
+We'd like to read in all the words in the sample file
+and count their frequency
+if it works it would be nice.
