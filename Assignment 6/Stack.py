@@ -25,14 +25,14 @@ class Stack:
         if self.stack:
             self.stack.popleft()
         else:
-            print("Stack is empty")
+            pass
 
     def top(self):
         # return the top element but don't remove it. Only do if not empty
         if self.stack:
-            return self[0]
+            return self.stack[0]
         else:
-            return("Stack is empty")
+            pass
     
     def isEmpty(self):
         #check if stack is empty
