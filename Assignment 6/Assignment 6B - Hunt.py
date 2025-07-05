@@ -37,3 +37,31 @@ if __name__ == "__main__":
 
         #Ask user if they want to continue
         response = input("Do you wish to continue (y/N): ").upper()
+
+''' testing
+>>> %run "c:\\Users\\devin\\OneDrive\\Documents\\positron\\DS510\\Assignment 6\\Assignment 6B - Hunt.py"
+Enter a numeric bid great than 0: 
+45
+new high bid is: 45
+High Bid History is:  45
+Do you wish to continue (y/N): 
+y
+Enter a numeric bid great than 0: 
+15
+High Bid History is:  45
+Do you wish to continue (y/N): 
+y
+Enter a numeric bid great than 0: 
+55
+new high bid is: 55
+High Bid History is:  55 -> 45
+Do you wish to continue (y/N): 
+y
+Enter a numeric bid great than 0: 
+150
+new high bid is: 150
+High Bid History is:  150 -> 55 -> 45
+Do you wish to continue (y/N): 
+N
+>>>
+'''
