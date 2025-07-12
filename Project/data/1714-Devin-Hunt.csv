@@ -1,0 +1,6 @@
+dept,courseNum,courseName,credits,semester,grade
+DS,510,Computer Science Fundamentals,4,25/SP,A
+BIN,501,Fundamentals of Bioinformatics,4,24/FA,A
+BIN,510,Molecular and Cell Biology,4,24/FA,A
+DS,520,Machine Learning,3,25/FA,A-
+BIN,400,Bioinformatics Algorithems,3,25/SP,D

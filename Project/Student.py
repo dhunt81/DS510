@@ -61,6 +61,56 @@ class Student:
         # return all but the header row
         return studentCourses[1:]           
 
+    def totalSummary(self):
+        
+        totalCredits = int(0)
+        totalQualPoints = float(0)
+        
+        for course in self.getCourses():
+            totalQualPoints += course.getQualityPoints()
+            totalCredits += int(course.credits)
+        
+        totalGPA = totalQualPoints / totalCredits
+
+        stringOutput = "Total Credits: {}   Overall Quality Points: {:.1f}   Overall GPA: {:.3f}".format(totalCredits, totalQualPoints, totalGPA)
+        print(stringOutput)
+
+        return None
+
+    def semesterSummary(self):
+
+        # get a list of all courses for the student
+        courses = self.getCourses()
+        #determine maximum course name length to format output
+        maxLen = max(len(courses[i].courseName) for i in range(len(courses)))
+
+        # create set of all semesters in the file. A set is chosen to allow for collection of unique values in the file
+        semesters = set([courses[i].semester for i in range(len(courses))]) 
+
+        # loop through the unique semesters identified above
+        for semester in semesters:
+            # create variables to count up total credits and quality points for the semester
+            semesterCredits = int(0)
+            semesterQualPoints = float(0)
+            # loop through the courses and determine if it is part of the semester
+            for course in self.getCourses():
+
+                # if course is in the semester then add credits and qual points to total
+                if course.semester == semester:
+                    semesterCredits += int(course.credits)
+                    semesterQualPoints += course.getQualityPoints()
+
+                    courseString = "{} {:<3} {} {:<30} {} credits {:<2} {:>5.2f} qual pts.".format(course.semester, course.dept, course.courseNum, course.courseName, course.credits, course.grade, course.getQualityPoints())
+                    print(courseString)
+
+            # calculate the semester GPA at end of loop        
+            semesterGPA = semesterQualPoints/semesterCredits
+            print("Semester GPA: {:.3f}\n".format(semesterGPA))
+        
+        return None
+
+            
+        
     # default printing using the super class output and adding additional variables
     def __str__(self):
         return f" {self.studentId} {self.firstName} {self.lastName}"
