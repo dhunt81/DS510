@@ -1,0 +1,14 @@
+dept,courseNum,courseName,credits,semester,grade
+DS,510,Comptuer Science Fundamentals,4,19/SP,A-
+MA,103,Quantitative Methods,3,19/SP,B+
+MA,116,Discrete Structures,4,19/SP,C-
+CS,480,Seminar,1,19/SP,B-
+CS,104,Quantitative MethodsA,3,19/FA,B
+MA,117,Discrete StructuresA,4,19/FA,C
+DS,512,Comptuer Science FundamentalsB,4,19/FA,C
+MA,105,Quantitative MethodsB,3,19/FA,B+
+MA,118,Discrete StructuresB,4,19/FA,A-
+DS,511,Comptuer Science FundamentalsA,4,19/FA,A
+DS,513,Comptuer Science Fundamentals,4,20/FA,A
+CS,119,Discrete Structures,4,20/FA,C+
+MA,106,Quantitative Methods,3,20/FA,B+
