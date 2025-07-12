@@ -69,7 +69,7 @@ if __name__ == "__main__":
 
             if enterAction == "EXIT":
                 break
-            
+
             # if user select to enter a new course
                 
             if enterAction == "N":
@@ -133,7 +133,92 @@ if __name__ == "__main__":
     
     # text to indicate program is terminating
     print('Good Bye')
-        
 
-                
+
+
+""" Test Run Output
+
+Enter a Student ID: 111
+This student exists, John Doe
+Would you like to enter a New course for this student or print a Summary of their transcript? (N/S/Exit) S
+
+Transcript for: John Doe (ID: 111)
+
+19/FA CS  104 Quantitative MethodsA          3 credits B   9.00 qual pts.
+19/FA MA  117 Discrete StructuresA           4 credits C   8.00 qual pts.
+19/FA DS  512 Comptuer Science FundamentalsB 4 credits C   8.00 qual pts.
+19/FA MA  105 Quantitative MethodsB          3 credits B+  9.99 qual pts.
+19/FA MA  118 Discrete StructuresB           4 credits A- 14.68 qual pts.
+19/FA DS  511 Comptuer Science FundamentalsA 4 credits A  16.00 qual pts.
+Semester GPA: 2.985
+
+20/FA DS  513 Comptuer Science Fundamentals  4 credits A  16.00 qual pts.
+20/FA CS  119 Discrete Structures            4 credits C+  9.32 qual pts.
+20/FA MA  106 Quantitative Methods           3 credits B+  9.99 qual pts.
+Semester GPA: 3.210
+
+19/SP DS  510 Comptuer Science Fundamentals  4 credits A- 14.68 qual pts.
+19/SP MA  103 Quantitative Methods           3 credits B+  9.99 qual pts.
+19/SP MA  116 Discrete Structures            4 credits C-  6.68 qual pts.
+19/SP CS  480 Seminar                        1 credits B-  2.67 qual pts.
+Semester GPA: 2.835
+
+Total Credits: 45   Overall Quality Points: 135.0   Overall GPA: 3.000
+View another student? (Y/N)Y
+Enter a Student ID: 100 
+This student ID doesn't exist. Would you like to add a new student? (Y/N/Exit): Y
+Enter Student's First Name: Devin
+Enter Student's Last Name: Hunt
+Would you like to enter a New course for this student or print a Summary of their transcript? (N/S/Exit) N
+Department abbreviation: BIN
+Course number: 500
+Course name: Bioinformatics Fundamentals
+Course credits: 4
+Semester course taken: 24/FA
+Grade received: A
+New course addedd sucessfully
+Would you like to add another course for this student? (Y/N)Y
+Department abbreviation: BIN
+Course number: 516
+Course name: Molecular and Cellulary Biology
+Course credits: 4
+Semester course taken: 24/FA
+Grade received: A
+New course addedd sucessfully
+Would you like to add another course for this student? (Y/N)Y
+Department abbreviation: DS
+Course number: 510
+Course name: Computer Science Fundamentals
+Course credits: 4
+Semester course taken: 25/SP
+Grade received: A
+New course addedd sucessfully
+Would you like to add another course for this student? (Y/N)N
+Would you like to enter a New course for this student or print a Summary of their transcript? (N/S/Exit) S
+
+Transcript for: Devin Hunt (ID: 100)
+
+24/FA BIN 500 Bioinformatics Fundamentals    4 credits A  16.00 qual pts.
+24/FA BIN 516 Molecular and Cellulary Biology 4 credits A  16.00 qual pts.
+Semester GPA: 4.000
+
+25/SP DS  510 Computer Science Fundamentals  4 credits A  16.00 qual pts.
+Semester GPA: 4.000
+
+Total Credits: 12   Overall Quality Points: 48.0   Overall GPA: 4.000
+View another student? (Y/N)Y
+Enter a Student ID: 145
+This student ID doesn't exist. Would you like to add a new student? (Y/N/Exit): Y
+Enter Student's First Name: Jason
+Enter Student's Last Name: Yamamura
+Would you like to enter a New course for this student or print a Summary of their transcript? (N/S/Exit) S
+
+Transcript for: Jason Yamamura (ID: 145)
+
+No Courses Entered
+
+View another student? (Y/N)N
+Good Bye
+
+"""
 

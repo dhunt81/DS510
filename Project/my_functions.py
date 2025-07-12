@@ -1,5 +1,18 @@
+##################################
+### Created: July 12, 2025
+### Author: Devin Hunt
+### Program: my_functions.py
+### Description: Seperate script to house custom functions used in the project.
+### Inputs: os
+### Packages: None 
+### Output: None
+### References: Pulled some new functions and knowledge from reading: 
+###             Ernesti, J., & Kaiser, P. (2022). Python 3: The comprehensive guide. Rheinwerk Publishing.
+##################################
+ 
 import os
 
+#This function is used to determine if the student id entered by user exists in the folder structure ./data
 def fileExists(studentId):
         # module to check if student file exists already by student ID
         # create list of files from directory

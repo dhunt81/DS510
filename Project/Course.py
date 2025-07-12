@@ -6,7 +6,8 @@
 ### Inputs: None
 ### Packages: None 
 ### Output: None
-### References: 
+### References: Pulled some new functions and knowledge from reading: 
+###             Ernesti, J., & Kaiser, P. (2022). Python 3: The comprehensive guide. Rheinwerk Publishing.
 ##################################
 
 class Course:

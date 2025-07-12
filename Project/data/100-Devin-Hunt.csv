@@ -1,0 +1,4 @@
+dept,courseNum,courseName,credits,semester,grade
+BIN,500,Bioinformatics Fundamentals,4,24/FA,A
+BIN,516,Molecular and Cellulary Biology,4,24/FA,A
+DS,510,Computer Science Fundamentals,4,25/SP,A

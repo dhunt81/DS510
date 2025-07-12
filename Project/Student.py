@@ -6,7 +6,8 @@
 ### Inputs: Course.py
 ### Packages: None 
 ### Output: None
-### References: 
+### References: Pulled some new functions and knowledge from reading: 
+###             Ernesti, J., & Kaiser, P. (2022). Python 3: The comprehensive guide. Rheinwerk Publishing.
 ##################################
 
 import os
@@ -63,15 +64,19 @@ class Student:
 
     def totalSummary(self):
         
+        # cumulative credits and qual points for the entire transcript
         totalCredits = int(0)
         totalQualPoints = float(0)
         
+        # loop through all courses and add up the total credits and qual points
         for course in self.getCourses():
             totalQualPoints += course.getQualityPoints()
             totalCredits += int(course.credits)
         
+        #calculate total GPA as total qual points / total credits
         totalGPA = totalQualPoints / totalCredits
 
+        # output the summary line for the transcript
         stringOutput = "Total Credits: {}   Overall Quality Points: {:.1f}   Overall GPA: {:.3f}".format(totalCredits, totalQualPoints, totalGPA)
         print(stringOutput)
 
@@ -99,17 +104,17 @@ class Student:
                 if course.semester == semester:
                     semesterCredits += int(course.credits)
                     semesterQualPoints += course.getQualityPoints()
-
-                    courseString = "{} {:<3} {} {:<30} {} credits {:<2} {:>5.2f} qual pts.".format(course.semester, course.dept, course.courseNum, course.courseName, course.credits, course.grade, course.getQualityPoints())
+                    
+                    # output the course description details and print to console
+                    courseString = "{} {:<3} {} {:<{}} {} credits {:<2} {:>5.2f} qual pts.".format(course.semester, course.dept, course.courseNum, course.courseName, maxLen, course.credits, course.grade, course.getQualityPoints())
                     print(courseString)
 
-            # calculate the semester GPA at end of loop        
+            # calculate the semester GPA at end of loop and print it to console       
             semesterGPA = semesterQualPoints/semesterCredits
             print("Semester GPA: {:.3f}\n".format(semesterGPA))
         
         return None
-
-            
+           
         
     # default printing using the super class output and adding additional variables
     def __str__(self):
