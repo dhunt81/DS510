@@ -9,6 +9,7 @@
 ### References: 
 ##################################
 
+import os
 import csv
 from GPA import *
 
@@ -53,13 +54,12 @@ class Student:
             # read in each row of the csv file and save to a GPA object
             for row in csv_reader:
                 # create a GPAA object based on row data from the csv file
-                GPAdata = GPA(row[0], row[1], row[2], row[3], row[4], row[5])
+                GPAdata = GPA(*row)
                 # append the object to the studentCourses list. This allows us to use class properties for GPA
                 studentCourses.append(GPAdata)
 
         # return all but the header row
         return studentCourses[1:]           
-
 
     # default printing using the super class output and adding additional variables
     def __str__(self):
