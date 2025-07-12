@@ -8,15 +8,10 @@
 ### Output: None
 ### References: 
 ##################################
-import Course
+from Course import *
 import os
 
 class GPA(Course):
-
-    # Create class dictionary to map letter grade to numeric grade
-    # creates here so it can be initiated once for the class instead of each time getQualityPoints is called
-    points = {"A":4.00, "A-":3.67, "B+":3.33, "B":3.00, "B-":2.67, "C+":2.33, "C":2.00, \
-        "C-":1.67, "D+":1.33, "D":1.00, "D-":0.67, "F":0}
 
     # initialization of the class object extending from super class
     def __init__(self, dept, courseNum, courseName, credits, semester, grade):
@@ -25,6 +20,11 @@ class GPA(Course):
         self.grade = grade
 
     def getQualityPoints(self):
+     
+        # Create class dictionary to map letter grade to numeric grade
+        points = {"A":4.00, "A-":3.67, "B+":3.33, "B":3.00, "B-":2.67, "C+":2.33, "C":2.00, \
+           "C-":1.67, "D+":1.33, "D":1.00, "D-":0.67, "F":0}
+
         # Calculate quality points by multiplying total course credits by numeric grade from above
         # Using the previously initialized grade and credits to calculate the qualiyt points and return
         qualPoints = int(self.credits) * points[self.grade]

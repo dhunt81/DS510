@@ -10,6 +10,7 @@
 ##################################
 
 import csv
+from GPA import *
 
 class Student:
 
