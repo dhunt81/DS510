@@ -8,7 +8,7 @@
 ### Output: None
 ### References: 
 ##################################
-from Course import *
+from Course import Course
 import os
 import csv
 
