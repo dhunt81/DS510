@@ -90,7 +90,7 @@ class Student:
         maxLen = max(len(courses[i].courseName) for i in range(len(courses)))
 
         # create set of all semesters in the file. A set is chosen to allow for collection of unique values in the file
-        semesters = set([courses[i].semester for i in range(len(courses))]) 
+        semesters = set([courses[i].semester. for i in range(len(courses))]) 
 
         # loop through the unique semesters identified above
         for semester in semesters:
