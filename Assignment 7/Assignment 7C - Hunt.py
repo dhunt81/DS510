@@ -12,7 +12,7 @@
 if __name__ == "__main__":
 
     expression = []    # expression is defined as a global variable
-    i = 0
+    i = 0              # counter to parse expression
 
     # Get expression from user
     inExp = input("Input a Prefix expression, with all tokens separated by spaces: ")
@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     def result():
         # get the first/next token from the expression, a string. 
-        global i
+        global i, expression
         token = expression[i]
         i += 1
 
