@@ -126,8 +126,8 @@ print(L3)
 # Need to reveiw lambda functions
 
 L = [("Apple", 15), ("Banana", 8), ("Strawberry", 12), ("Kiwi", 9), ("Peach", 2)]
-L = 
-
+L_sorted = sorted(L, key = lambda x: x[1]) 
+print(L_sorted)
 
 # Exercise 19
 ch = "Hello everyone"
@@ -136,3 +136,100 @@ print(ch_rev)
 
 # Exercise 20
 D = {"Apple":3, "Banana":7, "Kiwi":1}
+print(D["Apple"])
+print(D["Banana"])
+
+# Exercise 21
+D = {"Apple":15, "Banana":8, "Strawberry":12, "Kiwi":9, "Peach":2}
+sum_d = 0
+for d in D.keys():
+    print(d)
+    sum_d += D[d]
+print("Sum = ", sum_d)
+
+# Exercise 22
+inval = input("Enter a decimal value with more than 2 decimals: ")
+
+val_trunc = round(float(inval), 2)
+print(val_trunc)
+
+val_trunc_str = inval[0:inval.find('.')+3]
+print(val_trunc_str)
+
+# Excercise 23
+myName = "Julien"
+age = 32
+languageName = "Python"
+
+message = "My name is {} and I am {} years old. I am learning the language {}.".format(myName, age, languageName)
+print(message)
+
+# Exercise 24
+int_val = input("Enter a number: ")
+
+for x in range(11):
+    print ("{} x {} = {}".format(int_val, x, int(int_val)*x))
+
+# Exercise 25
+import os
+print(os.getcwd())
+
+# Exercise 26
+L=[1,2,3,4,5]
+L.remove(1)
+print(L)
+
+# Exercise 27
+file_name = "ae.sas7bdat"
+ext = file_name.split(".")[1]
+print(ext)
+
+# Exercise 28
+from datetime import datetime
+
+start = datetime.now()
+for x in range(11):
+    print ("{} x {} = {}".format(int_val, x, int(int_val)*x))
+end = datetime.now()
+runtime = end - start
+print("Execution time: {}".format(runtime))
+
+# Exeercise 29
+import random
+from datetime import datetime
+L = [3,6,8,7,2,'s', 'ch', 'd']
+L_shuffle = L[:]
+random.shuffle(L_shuffle)
+print(L_shuffle)
+
+start = datetime.now()
+cont = True
+while cont:
+    L_shuffle = L[:]
+    random.shuffle(L_shuffle)
+    if L_shuffle == L:
+        cont = False
+        print (L_shuffle , L)
+end = datetime.now()
+duration = end - start
+print("Duration: {}".format(duration))
+
+# Exercise 30
+import random
+
+print(random.randint(20,30))
+
+# Exercise 31
+rng = [str(n) for n in range(5,21)]
+for x in range(0,10):
+    print(" ".join(rng))
+
+# Exercise 32
+L = [3,6,9,12,15,18,21,24]
+L1 = [x/3 for x in L]
+print(L1)
+
+# Exercise 33
+L=[-6,5,-3,-1,2,8,-3.6]
+L1 = [x for x in L if x>0]
+print(L1)
